@@ -144,7 +144,6 @@ figcaption { margin-top: 0.5rem; font-size: 0.95rem; color: #555; }
 .brand { order: 1; }
 .header-phone { order: 2; padding: 0.5rem 0.9rem; }
 .site-header nav { order: 3; flex-basis: 100%; gap: 1rem; }
-.phone-number { display: none; }
 
 /* Hero: text first on phones, text and photo side by side on wider screens */
 .hero { background: var(--bg-alt); }
@@ -198,7 +197,7 @@ figcaption { margin-top: 0.5rem; font-size: 0.95rem; color: #555; }
 
 /* Contact section */
 address { font-style: normal; margin-bottom: 1rem; }
-.hours { list-style: none; padding: 0; margin: 0; }
+.hours { list-style: none; padding: 0; margin: 0 auto; }
 
 /* Footer */
 .site-footer {
@@ -232,7 +231,6 @@ main.section ul { padding-left: 1.25rem; }
   .brand, .header-phone, .site-header nav { order: 0; }
   .site-header nav { flex-basis: auto; gap: 1.25rem; }
   .header-phone { padding: 0.6rem 1rem; }
-  .phone-number { display: inline; }
   .header-inner { column-gap: 1.5rem; }
   .brand-name { font-size: 1.35rem; }
   .brand-sub { font-size: 0.85rem; }
@@ -247,7 +245,6 @@ main.section ul { padding-left: 1.25rem; }
 
 .find-us { width: 100%; max-width: 32rem; height: auto; border-radius: 8px; margin-bottom: 1rem; }
 
-.gallery { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-.gallery img { width: 100%; height: 14rem; object-fit: cover; border-radius: 8px; display: block; }
-@media (min-width: 700px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+.gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: 16rem; object-fit: cover; border-radius: 8px; display: block; }
