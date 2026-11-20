@@ -143,7 +143,7 @@ figcaption { margin-top: 0.5rem; font-size: 0.95rem; color: #555; }
 .header-inner { padding-top: 0.6rem; padding-bottom: 0.6rem; }
 .brand { order: 1; }
 .header-phone { order: 2; padding: 0.5rem 0.9rem; }
-.site-header nav { order: 3; flex-basis: 100%; gap: 1rem; }
+.site-header nav { order: 3; flex-basis: 100%; gap: 0.5rem 1rem; flex-wrap: wrap; }
 
 /* Hero: text first on phones, text and photo side by side on wider screens */
 .hero { background: var(--bg-alt); }
@@ -228,10 +228,6 @@ main.section ul { padding-left: 1.25rem; }
 
 /* Wider screens: more columns */
 @media (min-width: 700px) {
-  .brand, .header-phone, .site-header nav { order: 0; }
-  .site-header nav { flex-basis: auto; gap: 1.25rem; }
-  .header-phone { padding: 0.6rem 1rem; }
-  .header-inner { column-gap: 1.5rem; }
   .brand-name { font-size: 1.35rem; }
   .brand-sub { font-size: 0.85rem; }
   .hero-inner { grid-template-columns: 1.1fr 0.9fr; padding: 3rem 1.25rem; }
@@ -248,3 +244,11 @@ main.section ul { padding-left: 1.25rem; }
 .gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
 .gallery figure { margin: 0; }
 .gallery img { width: 100%; height: 16rem; object-fit: cover; border-radius: 8px; display: block; }
+
+/* Header goes into one row only when there is room for brand, nav and phone button */
+@media (min-width: 900px) {
+  .brand, .header-phone, .site-header nav { order: 0; }
+  .site-header nav { flex-basis: auto; gap: 1.25rem; }
+  .header-phone { padding: 0.6rem 1rem; }
+  .header-inner { column-gap: 1.5rem; }
+}
