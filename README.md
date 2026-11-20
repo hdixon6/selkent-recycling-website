@@ -28,7 +28,6 @@ This project was built with AI assistance (Claude) as part of my learning in dig
 - Tested the form end to end (including making sure emails reach the inbox, not spam)
 - Reviewed the code and can explain how it works
 
-_(Edit this section so it stays accurate and in your own words.)_
 
 ## Project docs
 
